@@ -1,2 +1,11 @@
 <h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+
+<%@posts.each do |post|%>
+<div class="text-center">
+<h3>Author:</h3>
+<h3><small><%=post.user.name%></h3>
+<h3>Body:</h3>
+<h3><small><%=post.body%></h3>
+<%= link_to "show" , show_users_path(post)%>
+</div>
+<%end%>

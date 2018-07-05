@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  root 'users#index'
   get 'users/new'
   get 'users/index'
-  get 'users/show'
-  get 'users/edit'
+  get 'users/:id', to:"users#show", as: "show_users"
+  get 'users/:id/edit', to:"users#edit", as: 'edit_users'
+  post 'users/:id/edit', to: 'users#update'
   get 'posts/new'
   get 'posts/index'
   get 'posts/show'
