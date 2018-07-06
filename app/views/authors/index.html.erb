@@ -1,0 +1,10 @@
+<h1 class="text-center">Authors#index</h1>
+<% @authors.each do |author| %>
+<h3>Author: <%=author.name%></h3>
+<h3>Age: <%=author.age%></h3>
+<%= link_to "Show", show_authors_path(author)%>
+<%= link_to "Edit", edit_authors_path(author)%>
+<%= link_to "Destroy", delete_author_path(author), method: :delete%>
+<%end%>
+<br>
+<%= link_to "New", new_author_path%>

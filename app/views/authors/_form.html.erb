@@ -1,0 +1,13 @@
+<%=form_with(model: author, local: true) do |form|%>
+<div class="">
+  <%=form.label :name%>
+  <%=form.text_field :name, id: :author_name%>
+</div>
+<div class="">
+  <%=form.label :age%>
+  <%=form.text_field :age, id: :author_age%>
+</div>
+<div class="">
+  <%=form.submit%>
+</div>
+<%end%>

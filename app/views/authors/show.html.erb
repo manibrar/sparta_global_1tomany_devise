@@ -1,0 +1,7 @@
+<h1>Authors#show</h1>
+
+<h2>Title:</h2><p><%=@author.name%></p><br>
+<h2>Age:</h2><p><%=@author.age%></p><br>
+<%= link_to "Back", root_path %>
+<% link_to "Edit", edit_authors_path(@author)%>
+<% link_to "Destroy", delete_author_path(@author), method: :delete%>
