@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'authors#index'
   get 'authors/new', to: "authors#new", as: "new_author"
   get 'authors/index'
